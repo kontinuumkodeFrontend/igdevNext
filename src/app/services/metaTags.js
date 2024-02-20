@@ -328,4 +328,266 @@ export const recordsManagementAuditMeta = {
     pageDescription:"C-Suite Executive Search. Discover top-tier CIOs, CISOs, DPOs, and more. Elevate your leadership with subject matter expert recruitment. Contact us now!",
     mainTitle: "Expert C-Suite Executive Search"
 }
+export const dcb0129Meta = {
+    pageTitle:'DCB0129 Compliance Services | NHS Access | IG-Smart Ltd',
+    pageDescription:"DCB0129 compliance services tailored to your organisations risks. Trust IG-Smart Ltd for DCB0129 compliance and Clinical Safety Officer Services.",
+    mainTitle: "DCB0129 Compliance Services "
+}
+
+export const dcb0160Meta = {
+    pageTitle:'NHS DC0160 Compliance & HealthTech Experts | IG-Smart Ltd',
+    pageDescription:"15 Years Delivering Excellence in NHS & Tech Compliance, Including DC0160 Compliance. Trust IG-Smart Ltd for Compliance & Healthcare Innovation Success!",
+    mainTitle: "NHS DC0160 Compliance & HealthTech Experts | IG-Smart Ltd "
+}
+
+export const hippaMeta = {
+    pageTitle:'HIPAA Compliance Experts | Privacy Consultancy| IG-Smart Ltd',
+    pageDescription:"Trust IG-Smart for HIPAA compliance. 15+ years of data privacy, cybersecurity, & compliance expertise. Navigate healthcare's privacy & regulatory landscape.",
+    mainTitle: "HIPAA Compliance Experts | Privacy Consultancy| IG-Smart Ltd "
+}
+
+export const nistMeta = {
+    pageTitle:'NIST Compliance Experts | Security & Privacy | IG-Smart Ltd',
+    pageDescription:"NIST Compliance Experts with 15+ years of excellence in data privacy, cybersecurity, and compliance. Trust us for NIST solutions. Contact us Today!",
+    mainTitle: "NIST Compliance Experts | Security & Privacy | IG-Smart Ltd "
+}
+
+export const NHS_IGCMeta = {
+    pageTitle:'NHS Information Governance Consultancy & DSP Toolkit',
+    pageDescription:"NHS information governance consultancy & DSP Toolkit compliance services trusted by leading health, social care, & tech firms. Get started. Submit your RFP.",
+    mainTitle: "NHS Information Governance Consultancy & DSP Toolkit "
+}
+
+export const DtacServiceMeta = {
+    pageTitle:'DTAC Services | Expert Compliance Solutions | IG-Smart Ltd',
+    pageDescription:"NHS DTAC services tailored to enable compliance with the Digital Technology Assessment Criteria (DTAC). Contact us today for NHS DTAC compliance services.",
+    mainTitle: "DTAC Services | Expert Compliance Solutions | IG-Smart Ltd "
+}
+
+export const AIPrivacyMeta = {
+    pageTitle:'Expert AI and Privacy Consultancy Services | IG-Smart Ltd',
+    pageDescription:"Enhance data privacy with our AI and Privacy Consultancy Services. Expert advice on implementing compliant and secure AI solutions. Contact us today!",
+    mainTitle: "Expert AI and Privacy Consultancy Services | IG-Smart Ltd "
+}
+
+export const BiometricDataMeta = {
+    pageTitle:'Biometric Data Protection Consultancy | IG-Smart Ltd',
+    pageDescription:"Biometric data protection consultancy services. Protect your biometric data with our expert solutions for compliance and security. Get started today!",
+    mainTitle: "Biometric Data Protection Consultancy | IG-Smart Ltd "
+}
+
+export const CyberSecConServiceMeta = {
+    pageTitle:'Expert Cyber Security Consultancy Services | IG-Smart Ltd',
+    pageDescription:"Cyber security consultancy services tailored to your organisations cyber security risks. Build your organisations resilience. Contact us today!",
+    mainTitle: "Expert Cyber Security Consultancy Services | IG-Smart Ltd "
+}
+
+export const CernerMeta = {
+    pageTitle:'Cerner Clinical System Specialists | IG-Health Ltd',
+    pageDescription:"Expert Cerner implementation, management advice, and support from leading healthcare informatics, clinical safety, pharmacy, nursing, and IG experts.",
+    mainTitle: "Cerner Clinical System Specialists | IG-Health Ltd "
+}
+
+export const DataPrivacyConsultancyMeta = {
+    pageTitle:'Simplified Data Privacy Consultancy Services | IG-Smart Ltd',
+    pageDescription:"Elevate your organisation's data privacy compliance with IG-Smart Ltd's top-tier Data Privacy Consultancy Services. Partner with us for tailored solutions.",
+    mainTitle: "Simplified Data Privacy Consultancy Services | IG-Smart Ltd "
+}
+
+export const DataProConServiceMeta = {
+    pageTitle:'Data Protection Consultancy Services | Global | IG-Smart Ltd',
+    pageDescription:"Data protection consultancy services - trusted by leading brands for 15+ years. Trust us for simplified GDPR compliance and more. Get started today. Submit RFP.",
+    mainTitle: "Data Protection Consultancy Services | Global | IG-Smart Ltd"
+}
+
+export const EnterpriseRiskManagementConsultancyMeta = {
+    pageTitle:'Enterprise Risk Management Consultancy | IG-Smart Ltd',
+    pageDescription:"15+ years of expertise in data privacy, cybersecurity, and compliance. Trust our enterprise risk management consultancy. Navigate complexity with confidence.",
+    mainTitle: "Enterprise Risk Management Consultancy | IG-Smart Ltd"
+}
+
+export const CCPAMeta = {
+    pageTitle:'CCPA & CPRA Compliance Experts | IG-Smart Ltd',
+    pageDescription:"CCPA & CPRA Compliance Experts in data privacy, cybersecurity, and GDPR compliance. Trust our data privacy solutions to navigate legal and tech requirements.",
+    mainTitle: "CCPA & CPRA Compliance Experts | IG-Smart Ltd"
+}
+
+export const GDPRDataMappingAndInventoryMeta = {
+    pageTitle:'GDPR Data Mapping & Inventory | IG-Smart Ltd',
+    pageDescription:"GDPR-compliant data mapping and inventory solutions. Gain control over your data. Consult with us today!",
+    mainTitle: "GDPR Data Mapping & Inventory | IG-Smart Ltd"
+}
+
+export const InfoGovConServiceMeta = {
+    pageTitle:'Information Governance Consultancy | IG-Smart Ltd',
+    pageDescription:"Information governance consultancy services designed to unlock organisational excellence by removing information governance barriers and enabling innovation.",
+    mainTitle: "Information Governance Consultancy | IG-Smart Ltd"
+}
+
+export const ISO27001ConsultancyeMeta = {
+    pageTitle:'ISO 27001 Consultancy | Expert Guidance | IG-Smart Ltd',
+    pageDescription:"ISO 27001 Consultancy for streamlined compliance. Expert guidance from IG-Smart Ltd. Tailored solutions and support. Contact us for expertise.",
+    mainTitle: "ISO 27001 Consultancy | Expert Guidance | IG-Smart Ltd"
+}
+
+export const GdprNhsConsultancyMeta = {
+    pageTitle:'Expert GDPR NHS Consultancy | GDPR Compliance | IG-Smart Ltd',
+    pageDescription:"Boost NHS data protection with our GDPR consultancy. Trusted experts ensure compliance, security, and patient trust. Contact us now for tailored solutions!",
+    mainTitle: "Expert GDPR NHS Consultancy | GDPR Compliance | IG-Smart Ltd"
+}
+
+export const PrivacyByDesignConsultationMeta = {
+    pageTitle:'Privacy by Design Consultancy | PbD Services | IG-Smart Ltd',
+    pageDescription:"Start right with privacy by design consultancy. Expert guidance for privacy-focused solutions. Enabling you to embed privacy by design. Contact us today!",
+    mainTitle: "Privacy by Design Consultancy | PbD Services | IG-Smart Ltd"
+}
+
+export const PrivacyInformationManagementSystemMeta = {
+    pageTitle:'Privacy Management System Consultancy | IG-Smart Ltd',
+    pageDescription:"15+ years as PIMS Consulting Experts in Privacy Information Management Standards Consultancy. Consult for innovative solutions, and achieve compliance.",
+    mainTitle: "Privacy Management System Consultancy | IG-Smart Ltd"
+}
+
+
+export const CyberEssenCertiServiceMeta = {
+    pageTitle:'Cyber Essentials Certification Services | IG-Smart Ltd',
+    pageDescription:"Acquire Cyber Essentials Certification Services easily. Safeguard your business from common cyber threats. Kickstart the certification process today!",
+    mainTitle: "Cyber Essentials Certification Services | IG-Smart Ltd"
+}
+
+
+export const IsoCertiServiceMeta = {
+    pageTitle:'ISO 27001 Certification Services | IG-Smart Ltd',
+    pageDescription:"Attain ISO 27001 Certification Services with Confidence. Safeguard your information assets, and showcase your commitment to security. Request certification now!",
+    mainTitle: "ISO 27001 Certification Services | IG-Smart Ltd"
+}
+
+export const ClinicalGovernanceMeta = {
+    pageTitle:'Clinical Governance Consultancy | IG-Smart Ltd.',
+    pageDescription:"Elevate clinical governance with our expert consultancy from IG-Smart Ltd. Optimise compliance, security, and excellence. Learn more!",
+    mainTitle: "Clinical Governance Consultancy | IG-Smart Ltd."
+}
+
+export const DataGovernanceMeta = {
+    pageTitle:'Data Governance Consultancy | Expert Solutions- IG-Smart Ltd',
+    pageDescription:"Elevate your data governance with expert data governance consultancy services. Tailored strategies, compliance solutions, and robust data governance strategy.",
+    mainTitle: "Data Governance Consultancy | Expert Solutions- IG-Smart Ltd"
+}
+
+export const BusinessConServiceMeta = {
+    pageTitle:'Business Continuity Gap Analysis Services | IG-Smart Ltd',
+    pageDescription:"Business continuity gap analysis services designed to strengthen your resilience for uninterrupted operations. Contact IG-Smart Ltd for a tailored RFP.",
+    mainTitle: "Business Continuity Gap Analysis Services | IG-Smart Ltd"
+}
+
+export const CyberRiskAndResilienceMeta = {
+    pageTitle:'Cyber Risk & Resilience Consultancy | IG-Smart Ltd',
+    pageDescription:"Elevate your security with our Cyber Risk & Resilience Consultancy. Expert in cybersecurity risk assessment & resilient solutions. Protect your business today!",
+    mainTitle: "Cyber Risk & Resilience Consultancy | IG-Smart Ltd"
+}
+
+export const DisasterRecoveryConsultancyMeta = {
+    pageTitle:'Disaster Recovery Consultancy | IG-Smart Ltd',
+    pageDescription:"15+ years of expertise in disaster recovery consultancy for legal, tech, and regulatory compliance. Innovate with confidence. Contact us today!",
+    mainTitle: "Disaster Recovery Consultancy | IG-Smart Ltd"
+}
+
+export const DataPrivacyImpactServiceMeta = {
+    pageTitle:'DPIA Services | Data Protection Impact | IG-Smart Ltd',
+    pageDescription:"Unlock compliance with our expert Data Protection Impact Assessment services. Mitigate risks and prioritise privacy. Get started with IG-Smart's DPIA services.",
+    mainTitle: "DPIA Services | Data Protection Impact | IG-Smart Ltd"
+}
+
+export const IncidentResponseAndManagementServicesMeta = {
+    pageTitle:'Incident Response & Management | IG-Smart Ltd',
+    pageDescription:"Be prepared for incidents. Expert services for incident response and management. Strengthen your security posture. Contact us today!",
+    mainTitle: "Incident Response & Management | IG-Smart Ltd"
+}
+
+
+export const MergeracquistionMeta = {
+    pageTitle:'Mergers & Acquisitions Risk | IG Smart Ltd',
+    pageDescription:"Trusted global consultancy: Data Protection, GDPR, Cyber Security, DPO Services, ISO 27001, Cyber Essentials Certification. Contact us for expert guidance.",
+    mainTitle: "Mergers & Acquisitions Risk | IG Smart Ltd"
+}
+
+export const SupplychainMeta = {
+    pageTitle:'Supply Chain Risk Management Services | IG-Smart Ltd',
+    pageDescription:"Protect your supply chain from risks. Expert Supply Chain Risk Management services and solutions. Safeguard your operations from third party risks now!",
+    mainTitle: "Supply Chain Risk Management Services | IG-Smart Ltd"
+}
+
+export const PenetrationTestServiceMeta = {
+    pageTitle:'CREST Penetration Testing Services | UK & GlobalIG-Smart Ltd',
+    pageDescription:"Ensure robust cyber security with CREST Penetration Testing services by IG-Smart Ltd. Expert CREST Pen Testing to safeguard your digital assets. Submit your RFP",
+    mainTitle: "CREST Penetration Testing Services | UK & GlobalIG-Smart Ltd"
+}
+
+
+export const DPforPharmaMeta = {
+    pageTitle:'Pharma Data Privacy Training | IG-Smart Ltd',
+    pageDescription:"Elevate your pharma data privacy expertise with IG-Smart Ltd. 15+ years of excellence in data privacy, cybersecurity, and Pharma Data Privacy training.",
+    mainTitle: "Pharma Data Privacy Training | IG-Smart Ltd"
+}
+
+export const DpoServiceMeta = {
+    pageTitle:'Outsourced Data Protection Officer Services | IG-Smart Ltd',
+    pageDescription:"Outsourced Data Protection Officer Services delivered by outsourced DPO consultants to help safeguard your data. Request your DPO service Proposal.",
+    mainTitle: "Outsourced Data Protection Officer Services | IG-Smart Ltd"
+}
+
+export const CsoServiceMeta = {
+    pageTitle:'Clinical Safety Officer Services | Outsourced | IG-Smart Ltd',
+    pageDescription:"Clinical Safety Officer services designed to enable you to win NHS contracts & ensure robust clinical risk management. Request your outsourced CSO services RFP!",
+    mainTitle: "Clinical Safety Officer Services | Outsourced | IG-Smart Ltd"
+}
+
+
+export const VcisoMeta = {
+    pageTitle:'VCISO Services | Experts on Demand | IG-Smart Ltd',
+    pageDescription:"VCISO services designed to help enable you to protect your digital assets with on-demand access to expert virtual Chief Information Security Officers.",
+    mainTitle: "VCISO Services | Experts on Demand | IG-Smart Ltd"
+}
+
+export const EurepresentativeMeta = {
+    pageTitle:'EU Representative Services | GDPR Compliance | IG-Smart Ltd',
+    pageDescription:"Ensure GDPR compliance with our GDPR EU Representative services. Trusted by industry leaders. Navigate legal, tech, and regulatory requirements with confidence",
+    mainTitle: "EU Representative Services | GDPR Compliance | IG-Smart Ltd"
+}
+
+export const UkrepresentativeMeta = {
+    pageTitle:'Trusted UK Representative Services | IG-Smart Ltd',
+    pageDescription:"Ensure compliance with UK regulations. Expert UK Representative Services for international businesses. Partner with IG-Smart Ltd for seamless compliance.",
+    mainTitle: "Trusted UK Representative Services | IG-Smart Ltd"
+}
+
+export const CareerMeta = {
+    pageTitle:'Explore IG-Smart Careers | Join Our Team | Effect Change',
+    pageDescription:"Discover exciting opportunities at IG-Smart Ltd. Join our innovative team and shape the future of information governance. Explore IG-Smart Careers now!",
+    mainTitle: "Explore IG-Smart Careers | Join Our Team | Effect Change"
+}
+
+export const InvestorMeta = {
+    pageTitle:'Data protection sector investments | IG-Smart Ltd',
+    pageDescription:"Explore data protection sector investments. 15+ years of data privacy, cybersecurity, and innovation expertise. Investors welcome. IG-Smart Ltd.",
+    mainTitle: "Data protection sector investments | IG-Smart Ltd"
+}
+
+export const MediaMeta = {
+    pageTitle:'Media Inquiries | Expertise in Data Privacy & Cybersecurity',
+    pageDescription:"Explore our 15+ years of expertise in data privacy and cybersecurity. Get media insights and interviews. Leading the way in compliant and secure innovation.",
+    mainTitle: "Media Inquiries | Expertise in Data Privacy & Cybersecurity"
+}
+
+export const SpeakerMeta = {
+    pageTitle:'Expert Data Privacy and Cybersecurity Speakers | Contact',
+    pageDescription:"Access 15+ years of expertise in data protection and innovation. Book Data Privacy and Cybersecurity speakers, conquer legal, tech, & regulatory challenges.",
+    mainTitle: "Expert Data Privacy and Cybersecurity Speakers | Contact"
+}
+
+export const LegalandComplianceMeta = {
+    pageTitle:'Legal & Compliance Solutions | IG-Smart Ltd',
+    pageDescription:"Elevate data security and compliance in the legal industry with IG-Smart Ltd. Contact us for professional solutions and expert guidance.",
+    mainTitle: "Legal & Compliance Solutions | IG-Smart Ltd"
+}
 

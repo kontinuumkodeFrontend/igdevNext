@@ -13,6 +13,8 @@ import Footer from "./Components/Footer";
 import { getPageMetaTitle } from "./Components/PageMetaTitle";
 import { homeMeta } from "./services/metaTags";
 import StripeWrapper from "./Components/StripeWrapper";
+import { MobileHeader } from "./Components/MobileHeader";
+import { ScrollUp } from "./Components/ScrollUp";
 
 const metadataInner = getPageMetaTitle({ data: homeMeta });
 
@@ -56,6 +58,8 @@ export default function RootLayout({ children }) {
           />
         <StripeWrapper>
           <Header />
+          <ScrollUp />
+          <MobileHeader />
           {children}
           <Footer />
           </StripeWrapper>

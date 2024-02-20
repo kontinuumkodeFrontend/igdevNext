@@ -1,40 +1,45 @@
+'use client'
 import React, { useState, useEffect } from "react";
-import upArrow from "../Assets/Images/up-arrow.png";
-import { useLocation  } from "react-router-dom";
+import { useRouter  } from "next/navigation";
 import { logPageView } from "./GoogleAnalytics";
 
 export const ScrollUp = ({link}) => {
-  const location = useLocation();
+  const upArrow = "/images/up-arrow.png";
+  const pathname = useRouter();
   const [visible, setVisible] = useState(false);
-
-  const toggleVisible = () => {
-    const windowHeight = window.innerHeight;
-    const scrollY = window.scrollY;
-    const documentHeight = document.documentElement.scrollHeight;
-    if (scrollY + windowHeight >= (documentHeight / 2)) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  };
 
   useEffect(() => {
     logPageView();
-  }, [location]);
+  }, [pathname]);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
-
+  
   useEffect(() => {
-    window.addEventListener('scroll', toggleVisible);
-    return () => {
-      window.removeEventListener('scroll', toggleVisible);
+    const toggleVisible = () => {
+      const windowHeight = window.innerHeight;
+      const scrollY = window.scrollY;
+      const documentHeight = document.documentElement.scrollHeight;
+      if (scrollY + windowHeight >= (documentHeight / 2)) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
     };
-  }, [window]);
+  
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', toggleVisible);
+      return () => {
+        window.removeEventListener('scroll', toggleVisible);
+      };
+    }
+  }, []);
 
   return (
     <div className={`up_arw ${visible ? '' : 'd-none'}`}>

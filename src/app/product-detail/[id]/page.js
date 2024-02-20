@@ -12,21 +12,30 @@ import InnerBanner from "../../Components/InnerBanner";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { CoursePagesID } from "../../services/Constants";
+import CryptoJS from 'crypto-js';
+import Cookies from 'js-cookie';
 
 export default function ViewProduct(){
   const dpoImg = "/images/dpoImg2.png";
   const dpoImg2 = "/images/blogBan.png";
-  const pathName = usePathname();
   const router = useRouter();
-  const navigate =(url)=>{
-    router.push(url)
-  }
+  const pathName = usePathname();
   const pathArr = pathName.split('/')
-  let location 
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
-  const courseData = location?.state?.courseData ;
-  const payData = location?.state?.payData ;
+  const [courseData, setCourseData] = useState(null);
+  const [payData, setPayData] = useState(null);
+  
+
+  useEffect(() => {
+    const encryptedData = Cookies.get('encryptedData');
+    if (encryptedData) {
+      const bytes = CryptoJS.AES.decrypt(encryptedData, 'encryption_key');
+      const decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+      setCourseData(decryptedData?.courseData);
+      setPayData(decryptedData?.payData);
+    }
+  }, []);
 
   useEffect(() => {
     axios
@@ -60,7 +69,7 @@ export default function ViewProduct(){
   }
   
 const checkoutHandler = () => {
-    navigate(`/checkout/${pathArr[2]}`, { state: {courseData, payData} });
+    router?.push(`/checkout/${pathArr[2]}`);   
 }
 
 const isStorePage = () => {

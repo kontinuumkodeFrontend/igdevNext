@@ -15,7 +15,7 @@ import { toast } from "react-toastify";
 import InnerBanner from "../Components/InnerBanner";
 
 export default function Store(){
-  const dpoImg2 = "/images/dpoImg2.png";
+  const dpoImg2 = "/images/productPlaceholder.png";
   const [data, setData] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState([]);

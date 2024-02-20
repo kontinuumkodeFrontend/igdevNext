@@ -5,6 +5,7 @@ iframe#webpack-dev-server-client-overlay {
   display: none !important
 }
 
+
 /* ***** */
 :root {
   --primary-color: #163a6c;
@@ -42,7 +43,9 @@ iframe#webpack-dev-server-client-overlay {
 .color-secondry {
   color: var(--secondry-color);
 }
-
+.imgContain{
+  object-fit: contain !important;
+}
 ul,
 ol {
   padding: 0 !important;
@@ -449,7 +452,7 @@ div#basic-navbar-nav {
 
 .dropdown-toggle::after {
   border: 0 !important;
-  background-image: url("./Assets/Images/dropdown.svg") !important;
+  background-image: url("/images/dropdown.svg") !important;
   width: 10px;
   height: 10px;
   background-repeat: no-repeat;
@@ -459,7 +462,7 @@ div#basic-navbar-nav {
 }
 
 .dropdown-toggle.show::after {
-  background-image: url("./Assets/Images/dropdown-rotate.png") !important;
+  background-image: url("/images/dropdown-rotate.png") !important;
 }
 
 .navbar-nav {
@@ -1187,7 +1190,7 @@ span.navbar-toggler-icon {
   object-fit: cover;
   border-radius: 10px 10px 0 0;
   object-position: center;
-  background: #4444440d;
+  background: #eaedf2 !important;
   border-bottom: 1px solid #efebeb;
 }
 
@@ -1428,7 +1431,7 @@ span.navbar-toggler-icon {
 
 .sol-sec {
   background-color: var(--bg-color);
-  background-image: url("./Assets/Images/bg-client.png");
+  background-image: url("/images/bg-client.png");
   padding: 39px 152px;
   color: var(--white);
   min-height: 260px;
@@ -1597,7 +1600,7 @@ span.navbar-toggler-icon {
 
 .custom-list ul li::after {
   content: "";
-  background: url("./Assets/Images/listIcon.png");
+  background: url("/images/listIcon.png");
   background-repeat: no-repeat;
   max-width: 20px;
   max-height: 20px;
@@ -1704,7 +1707,7 @@ span.navbar-toggler-icon {
 
 
 .slick-prev:before {
-  background-image: url("./Assets/Images/arrow-left.png");
+  background-image: url("/images/arrow-left.png");
   content: "" !important;
   position: absolute;
   background-repeat: no-repeat;
@@ -1715,7 +1718,7 @@ span.navbar-toggler-icon {
 }
 
 .slick-next:before {
-  background-image: url("./Assets/Images/arrow-right.png");
+  background-image: url("/images/arrow-right.png");
   content: "" !important;
   position: absolute;
   background-repeat: no-repeat;
@@ -1750,7 +1753,7 @@ span.navbar-toggler-icon {
   content: "";
   width: 40px;
   height: 40px;
-  background: url("./Assets/Images/qoutes.png");
+  background: url("/images/qoutes.png");
   top: -40px;
   left: -40px;
   background-repeat: no-repeat;
@@ -2152,7 +2155,7 @@ span.navbar-toggler-icon {
 
 .main-service-sec-list li::after {
   content: "";
-  background: url("./Assets/Images/listIcon.png");
+  background: url("/images/listIcon.png");
   background-repeat: no-repeat;
   max-width: 30px;
   max-height: 30px;
@@ -2793,7 +2796,7 @@ span.navbar-toggler-icon {
 
 .ltd-case-description h2::after {
   content: "";
-  background: url("./Assets/Images/Subtract.png");
+  background: url("/images/Subtract.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -2941,7 +2944,7 @@ p.talk-to-expert-msg {
 
 .hire-sec ul li:nth-child(-n + 4)::after {
   content: "";
-  background: url("./Assets/Images/hireVector.png");
+  background: url("/images/hireVector.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -3282,7 +3285,7 @@ p.talk-to-expert-msg {
 
 /* Payment plan section starts */
 .payment-plan-sec {
-  background: url("./Assets/Images/paymentBg.png");
+  background: url("/images/paymentBg.png");
   background-repeat: no-repeat;
   padding: 80px 0;
   background-size: cover;
@@ -3789,7 +3792,7 @@ textarea {
 
 /* Speak to advisor starts*/
 .speak-to-adv-sec {
-  background: url("./Assets/Images/supportBg.png");
+  background: url("/images/supportBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 75px 0;
@@ -3837,7 +3840,7 @@ textarea {
 
 /* Data protection section starts */
 .dta-pro-sec {
-  background: url("./Assets/Images/dataBg.png");
+  background: url("/images/dataBg.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 85px 180px 75px 150px;
@@ -4032,7 +4035,7 @@ textarea {
 
 .sm-cricles {
   content: "";
-  background: url("./Assets/Images/Ellipse.png");
+  background: url("/images/Ellipse.png");
   background-repeat: space repeat;
   max-width: 100px;
   max-height: 100px;
@@ -4259,7 +4262,7 @@ textarea {
   height: 11px;
   top: 5px;
   left: -16px;
-  background-image: url("./Assets/Images/home/fooyter-arrow.png");
+  background-image: url("/images/home/fooyter-arrow.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -6376,7 +6379,7 @@ span.woocommerce-Price-amount.amount,
 }
 
 .bdl_upr_hdg {
-  background-image: url('./Assets/Images/bdl_Image2.png');
+  background-image: url('/images/bdl_Image2.png');
   height: 210px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -6391,11 +6394,11 @@ span.woocommerce-Price-amount.amount,
 }
 
 .bdl_pdt_card:nth-child(3n-1) .bdl_upr_hdg {
-  background-image: url('./Assets/Images/bdl_Image.png');
+  background-image: url('/images/bdl_Image.png');
 }
 
 .bdl_pdt_card:nth-child(3n) .bdl_upr_hdg {
-  background-image: url('./Assets/Images/bdl_Image3.png');
+  background-image: url('/images/bdl_Image3.png');
 }
 
 .bdl_pdt_card:nth-child(3n-1) .sale{
@@ -6468,7 +6471,7 @@ span.woocommerce-Price-amount.amount,
   left: -23px;
   top: 0px;
   content: "";
-  background: url('./Assets/Images/checkMarkCard.png');
+  background: url('/images/checkMarkCard.png');
   background-position: center;
   background-size: contain;
 }

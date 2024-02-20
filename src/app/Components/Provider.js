@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { QueryClient, QueryClientProvider } from "react-query";
 
 export default function Provider({ children }) {

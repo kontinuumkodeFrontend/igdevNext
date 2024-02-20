@@ -15,7 +15,7 @@ export default function OurLeadership() {
 
   return (
     <>
-      <Banner bannerCnt={bannerContent} banImg={'../Assets/Images/leaderBan.png'} />
+      <Banner bannerCnt={bannerContent} banImg={'/images/leaderBan.png'} />
       <section className="about7-team sec-padding">
         <Container>
           <div className="leadership-team">
@@ -28,7 +28,7 @@ export default function OurLeadership() {
               <Link prefetch={true} href={"/team-detail/michael"} className="leader-card">
                 <div className="leader-profile">
                   <div className="leader-profile-img">
-                    <img  loading="lazy"  width="" height=""   alt="team1" src='../Assets/Images/team/team1.jpeg' />
+                    <img  loading="lazy"  width="" height=""   alt="team1" src='/images/team/team1.jpeg' />
                   </div>
                   <div className="leader-details">
                     <h5>Michael Abtar</h5>
@@ -40,13 +40,13 @@ export default function OurLeadership() {
                     </h6>
                     <div className="about7-social-icons">
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'img" src={'../Assets/Images/icon1.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg" src={'/images/icon1.svg'} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'2img" src={"../Assets/Images/icon2.svg"} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg'2img" src={"/images/icon2.svg"} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'3img" src={'../Assets/Images/icon3.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg'3img" src={'/images/icon3.svg'} />
                       </a>
                     </div>
                   </div>
@@ -56,7 +56,7 @@ export default function OurLeadership() {
               <Link prefetch={true} href="/team-detail/claire" className="leader-card">
                 <div className="leader-profile">
                   <div className="leader-profile-img">
-                    <img  loading="lazy"  width="" height=""   alt="team8" src={'../Assets/Images/team/team8.jpg'} />
+                    <img  loading="lazy"  width="" height=""   alt="team8" src={'/images/team/team8.jpg'} />
                   </div>
                   <div className="leader-details">
                     <h5>Claire Griffin</h5>
@@ -66,13 +66,13 @@ export default function OurLeadership() {
                     </h6>
                     <div className="about7-social-icons">
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'1img" src={'../Assets/Images/icon1.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg'1img" src={'/images/icon1.svg'} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'22img" src={"../Assets/Images/icon2.svg"} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg'22img" src={"/images/icon2.svg"} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'34img" src={'../Assets/Images/icon3.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg'34img" src={'/images/icon3.svg'} />
                       </a>
                     </div>
                   </div>
@@ -82,7 +82,7 @@ export default function OurLeadership() {
               <Link prefetch={true} href="/team-detail/bright" className="leader-card">
                 <div className="leader-profile">
                   <div className="leader-profile-img">
-                    <img  loading="lazy"  width="" height=""   alt="team7" src={'../Assets/Images/team/team7.jpg'} />
+                    <img  loading="lazy"  width="" height=""   alt="team7" src={'/images/team/team7.jpg'} />
                   </div>
                   <div className="leader-details">
                     <h5>Dr. Bright G. Mawudor</h5>
@@ -92,13 +92,13 @@ export default function OurLeadership() {
                     </h6>
                     <div className="about7-social-icons">
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'img" src={'../Assets/Images/icon1.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg" src={'/images/icon1.svg'} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="img" src={"../Assets/Images/icon2.svg"} />
+                        <img  loading="lazy"  width="" height=""   alt="img" src={"/images/icon2.svg"} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon3.svg'img" src={'../Assets/Images/icon3.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon3.svg" src={'/images/icon3.svg'} />
                       </a>
                     </div>
                   </div>
@@ -108,7 +108,7 @@ export default function OurLeadership() {
               <Link prefetch={true} href="/team-detail/shaista" className="leader-card">
                 <div className="leader-profile">
                   <div className="leader-profile-img">
-                    <img  loading="lazy"  width="" height=""   alt="profile1img" src={'../Assets/Images/team/team3.jpg'} />
+                    <img  loading="lazy"  width="" height=""   alt="profile1img" src={'/images/team/team3.jpg'} />
                   </div>
                   <div className="leader-details">
                     <h5>Shaista Peart</h5>
@@ -118,13 +118,13 @@ export default function OurLeadership() {
                     </h6>
                     <div className="about7-social-icons">
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'siimg" src={'../Assets/Images/icon1.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg" src={'/images/icon1.svg'} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'siimg1" src={"../Assets/Images/icon2.svg"} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg" src={"/images/icon2.svg"} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'siimg3" src={'../Assets/Images/icon3.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg" src={'/images/icon3.svg'} />
                       </a>
                     </div>
                   </div>
@@ -134,7 +134,7 @@ export default function OurLeadership() {
               <Link prefetch={true} href="/team-detail/ashantel" className="leader-card">
                 <div className="leader-profile">
                   <div className="leader-profile-img">
-                    <img  loading="lazy"  width="" height=""   alt="team6" src={'../Assets/Images/team/team6.jpg'} />
+                    <img  loading="lazy"  width="" height=""   alt="team6" src={'/images/team/team6.jpg'} />
                   </div>
                   <div className="leader-details">
                     <h5>Ashantel Lachhani</h5>
@@ -145,13 +145,13 @@ export default function OurLeadership() {
                     </h6>
                     <div className="about7-social-icons">
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'" src={'../Assets/Images/icon1.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg'" src={'/images/icon1.svg'} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="" src={"../Assets/Images/icon2.svg"} />
+                        <img  loading="lazy"  width="" height=""   alt="" src={"/images/icon2.svg"} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon3.svg'" src={'../Assets/Images/icon3.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon3.svg'" src={'/images/icon3.svg'} />
                       </a>
                     </div>
                   </div>
@@ -161,7 +161,7 @@ export default function OurLeadership() {
               <Link prefetch={true} href="/team-detail/himanshu" className="leader-card">
                 <div className="leader-profile">
                   <div className="leader-profile-img">
-                    <img  loading="lazy"  width="" height=""   alt="team4" src={'../Assets/Images/team/team4.jpg'} />
+                    <img  loading="lazy"  width="" height=""   alt="team4" src={'/images/team/team4.jpg'} />
                   </div>
                   <div className="leader-details">
                     <h5>Himanshu Desai</h5>
@@ -172,13 +172,13 @@ export default function OurLeadership() {
                     </h6>
                     <div className="about7-social-icons">
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'" src={'../Assets/Images/icon1.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg'" src={'/images/icon1.svg'} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="" src={"../Assets/Images/icon2.svg"} />
+                        <img  loading="lazy"  width="" height=""   alt="" src={"/images/icon2.svg"} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon3.svg'" src={'../Assets/Images/icon3.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon3.svg'" src={'/images/icon3.svg'} />
                       </a>
                     </div>
                   </div>
@@ -188,7 +188,7 @@ export default function OurLeadership() {
               <Link prefetch={true} href="/team-detail/loice" className="leader-card">
                 <div className="leader-profile">
                   <div className="leader-profile-img">
-                    <img  loading="lazy"  width="" height=""   alt="team9" src={'../Assets/Images/team/loice.jpeg'} />
+                    <img  loading="lazy"  width="" height=""   alt="team9" src={'/images/team/loice.jpeg'} />
                   </div>
                   <div className="leader-details">
                     <h5>Loice Kerubo Nyaribo</h5>
@@ -198,13 +198,13 @@ export default function OurLeadership() {
                     </h6>
                     <div className="about7-social-icons">
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'" src={'../Assets/Images/icon1.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg'" src={'/images/icon1.svg'} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="" src={"../Assets/Images/icon2.svg"} />
+                        <img  loading="lazy"  width="" height=""   alt="" src={"/images/icon2.svg"} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon3.svg'" src={'../Assets/Images/icon3.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon3.svg'" src={'/images/icon3.svg'} />
                       </a>
                     </div>
                   </div>
@@ -214,7 +214,7 @@ export default function OurLeadership() {
               <Link prefetch={true} href="/team-detail/marynelle" className="leader-card">
                 <div className="leader-profile">
                   <div className="leader-profile-img">
-                    <img  loading="lazy"  width="" height=""   alt="team2" src={'../Assets/Images/team/team2.jpg'} />
+                    <img  loading="lazy"  width="" height=""   alt="team2" src={'/images/team/team2.jpg'} />
                   </div>
                   <div className="leader-details">
                     <h5>Marynelle Li</h5>
@@ -223,13 +223,13 @@ export default function OurLeadership() {
                     </h6>
                     <div className="about7-social-icons">
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon1.svg'" src={'../Assets/Images/icon1.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon1.svg'" src={'/images/icon1.svg'} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="" src={"../Assets/Images/icon2.svg"} />
+                        <img  loading="lazy"  width="" height=""   alt="" src={"/images/icon2.svg"} />
                       </a>
                       <a href="">
-                        <img  loading="lazy"  width="" height=""   alt="'../Assets/Images/icon3.svg'" src={'../Assets/Images/icon3.svg'} />
+                        <img  loading="lazy"  width="" height=""   alt="/images/icon3.svg'" src={'/images/icon3.svg'} />
                       </a>
                     </div>
                   </div>
@@ -243,7 +243,7 @@ export default function OurLeadership() {
         <div className="container">
           <div className="complex-chng-des chng-des-md content_card">
             <div className="cmpx-img-card simple_Img team-img">
-              <img  loading="lazy"  width="" height=""   src={'../Assets/Images/59-min.jpg'} className="img-fluid cover" alt="'../Assets/Images/icon3.svg'img" />
+              <img  loading="lazy"  width="" height=""   src={'/images/59-min.jpg'} className="img-fluid cover" alt="/images/icon3.svg" />
             </div>
             <div className="cmpx-chng-des">
               <div
@@ -286,7 +286,7 @@ export default function OurLeadership() {
               </div>
             </div>
             <div className="cmpx-img-card simple_Img team-img">
-              <img  loading="lazy"  width="" height=""   src={'../Assets/Images/91-min.jpg'} className="img-fluid cover" alt="img-fluid" />
+              <img  loading="lazy"  width="" height=""   src={'/images/91-min.jpg'} className="img-fluid cover" alt="img-fluid" />
             </div>
           </div>
         </div>
@@ -296,7 +296,7 @@ export default function OurLeadership() {
         <div className="container">
           <div className="complex-chng-des chng-des-md content_card">
             <div className="cmpx-img-card simple_Img team-img">
-              <img  loading="lazy"  width="" height=""   src={"../Assets/Images/102-min.jpg"} className="img-fluid cover" alt="simple_Img1" />
+              <img  loading="lazy"  width="" height=""   src={"/images/102-min.jpg"} className="img-fluid cover" alt="simple_Img1" />
             </div>
             <div className="cmpx-chng-des">
               <div

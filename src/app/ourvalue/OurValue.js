@@ -31,7 +31,7 @@ export default function OurValue() {
     <>
       <Banner
         bannerCnt={bannerContent}
-        banImg={"../Assets/Images/happyTeam.jpeg"}
+        banImg={"/images/happyTeam.jpeg"}
       />
       <section className="our-values-sec sec-padding">
         <Container>
@@ -46,7 +46,7 @@ export default function OurValue() {
                 loading="lazy"
                 width=""
                 height=""
-                src={"../Assets/Images/value1Icon.svg"}
+                src={"/images/value1Icon.svg"}
                 alt="imgicon1"
               />
               <h5>Client Centric Focus</h5>
@@ -62,7 +62,7 @@ export default function OurValue() {
                 loading="lazy"
                 width=""
                 height=""
-                src={"../Assets/Images/value2Icon.svg"}
+                src={"/images/value2Icon.svg"}
                 alt="imgicon2"
               />
               <h5>Empowering Innovation</h5>
@@ -78,7 +78,7 @@ export default function OurValue() {
                 loading="lazy"
                 width=""
                 height=""
-                src={"../Assets/Images/value3Icon.svg"}
+                src={"/images/value3Icon.svg"}
                 alt="imgicon3"
               />
               <h5> Ethical Excellence</h5>
@@ -94,7 +94,7 @@ export default function OurValue() {
                 loading="lazy"
                 width=""
                 height=""
-                src={"../Assets/Images/value4Icon.svg"}
+                src={"/images/value4Icon.svg"}
                 alt="imgicon4"
               />
               <h5>Social Responsibility</h5>
@@ -111,7 +111,7 @@ export default function OurValue() {
                 loading="lazy"
                 width=""
                 height=""
-                src={"../Assets/Images/value5Icon.svg"}
+                src={"/images/value5Icon.svg"}
                 alt="imgicon5"
               />
               <h5>Diversity and Inclusion</h5>
@@ -145,7 +145,7 @@ export default function OurValue() {
               width=""
               height=""
               className="img1"
-              src={"../Assets/Images/mission.jpg"}
+              src={"/images/mission.jpg"}
               alt="standardImg"
             />
           </div>
@@ -169,7 +169,7 @@ export default function OurValue() {
               loading="lazy"
               width=""
               height=""
-              src={"../Assets/Images/map.png"}
+              src={"/images/map.png"}
               alt="mapImg"
             />
           </div>

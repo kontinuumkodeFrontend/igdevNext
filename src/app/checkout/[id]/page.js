@@ -19,6 +19,9 @@ import { toast } from "react-toastify";
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import moment from "moment";
 import { CoursePagesID } from "../../services/Constants";
+import CryptoJS from 'crypto-js';
+import Cookies from 'js-cookie';
+
 
 export default function Checkout() {
 const orderSummeryImg = "/images/orderSummery.jpg";
@@ -45,15 +48,31 @@ const orderSummeryBanner = "/images/orderSummeryBanner.jpg";
   const [orderSum, setOrderSum] = useState(false);
   const [orderSumData, setOrderSumData] = useState({});
   const [paymentMode, setPaymentMode] = useState("COD");
-  const courseData = location?.state?.courseData ;
-  const payData = location?.state?.payData ;
+  const [courseData, setCourseData] = useState(null);
+  const [payData, setPayData] = useState(null);
+  const discountedProducts = ['31325', '31323', '31321', '31319', '31318', '31316', '31314', '31312', '31221']
+
+  useEffect(() => {
+    if (discountedProducts?.includes(id)) {
+      const encryptedData = Cookies.get('encryptedData');
+      if (encryptedData) {
+        const bytes = CryptoJS.AES.decrypt(encryptedData, 'encryption_key');
+        const decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+        setCourseData(decryptedData?.courseData);
+        setPayData(decryptedData?.payData);
+      }
+    }else{
+      Cookies.remove('encryptedData');
+    }
+  }, [id])
+  
 
   const paymentMethods = [
     // { id: 1, title: "COD", description: "Cash On Delivery" },
     { id: 2, title: "Cards", description: "Pay with your Card" },
   ];
 
-  const discountedProducts = ['31325', '31323', '31321', '31319', '31318', '31316', '31314', '31312', '31221']
+  
 
   useEffect(() => {
     if (!payData) {
@@ -160,6 +179,7 @@ const orderSummeryBanner = "/images/orderSummeryBanner.jpg";
           toast.success("Order Placed Successfully");
           setOrderSum(true);
           setOrderSuccessData(response?.data);
+          Cookies.remove('encryptedData');
           setTimeout(() => {
           setIsLoading(false);
         }, 1000);
@@ -367,8 +387,9 @@ const orderSummeryBanner = "/images/orderSummeryBanner.jpg";
         try {
           const { token, error } = await stripe.createToken(elements.getElement(CardElement));
           if (error) {
-            console.error(error);
-            setLoading(false);
+            toast.error(error.code)
+            setIsLoading(false)
+            setLoading(false)
           } else {
             const response = await fetch(PAYMENT_API, {
               method: 'POST',

@@ -15,7 +15,7 @@ a {
 }
 
 .banner {
-    background-image: url("./Assets/Images/home/banner-bg.png");
+    background-image: url("/images/home/banner-bg.png");
     background-size: cover;
     padding: 50px 0 240px;
 }
@@ -127,7 +127,7 @@ a {
     padding: 30px;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url("./Assets/Images/home/about-bg.png");
+    background-image: url("/images/home/about-bg.png");
     background-position: 235px 0px;
 }
 
@@ -167,7 +167,7 @@ a {
 }
 
 .about-card:after {
-    background-image: url("./Assets/Images/home/bannerCard.png");
+    background-image: url("/images/home/bannerCard.png");
     background-size: contain;
     background-repeat: no-repeat;
     right: -5px;
@@ -180,7 +180,7 @@ a {
     z-index: -1;
 }
 .about-card:nth-child(2):after{
-    background-image: url("./Assets/Images/home/about-bg2.png"); 
+    background-image: url("/images/home/about-bg2.png"); 
 } 
 .sec-heading-wpr.center {
     text-align: center;
@@ -347,7 +347,7 @@ a {
 }
 
 .advisor {
-    /* background-image: url("./Assets/Images/home/advisor.png"); */
+    /* background-image: url("/images/home/advisor.png"); */
     background-size: cover;
     padding: 80px 0;
 }
@@ -434,7 +434,7 @@ a {
 }
 
 .blog {
-    /* background-image: url("./Assets/Images/home/blog-bg.png"); */
+    /* background-image: url("/images/home/blog-bg.png"); */
     background-size: cover;
     background-attachment: fixed;
 }
@@ -483,14 +483,14 @@ a {
     height: 25px;
     top: 32%;
     left: -16px;
-    background-image: url("./Assets/Images/home/fooyter-arrow.png");
+    background-image: url("/images/home/fooyter-arrow.png");
     bottom: -13px;
     background-repeat: no-repeat;
     margin: auto;
 }
 
 .footer-top {
-    background-image: url("./Assets/Images/home/footer-bg.png");
+    background-image: url("/images/home/footer-bg.png");
     background-size: cover;
 }
 
@@ -515,7 +515,7 @@ a {
 }
 
 .footer-bottom {
-    background-image: url("./Assets/Images/home/footer-bg2.png");
+    background-image: url("/images/home/footer-bg2.png");
     background-size: cover;
 }
 

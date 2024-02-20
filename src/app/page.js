@@ -203,7 +203,7 @@ export default function Home() {
             <div className="col-xl-6">
               <div className="privacy-image d-flex">
                 <img  loading="lazy"  width="420px" height="504px"  
-                  src="/images/home-page-slices_05.webp"
+                  src="/images/home-page-slices05.webp"
                   alt=" Diverse Multidisciplinary Thinking"
                 />
               </div>
@@ -783,7 +783,7 @@ export default function Home() {
       <section
         className="advisor mailchimp-sec text-light text-center"
         style={{
-          backgroundImage: `url('/bg_newsletter.webp')`,
+          backgroundImage: `url('/bgnewsletter.webp')`,
           backgroundColor: "#020747",
         }}
       >

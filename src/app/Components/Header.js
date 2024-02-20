@@ -1,20 +1,28 @@
 'use client'
 import React, { useEffect } from "react";
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import SpeackAdvisor from "./SpeackAdvisor";
 import Dropdown from "react-bootstrap/Dropdown";
+import { initGA, logPageView } from "./GoogleAnalytics";
 
 export default function Header() {
   const router = useRouter();
+  const pathname = usePathname();
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    initGA();
+    logPageView();
+  }, [pathname]);
 
 //   useEffect(() => {
 //   if(typeof document !== undefined){
@@ -133,22 +141,22 @@ useEffect(() => {
             <ul className="scl-icons">
               <li>
                 <a href="https://www.facebook.com/igsmartuk/">
-                  <img  loading="lazy"  width="" height=""   src={'/images/facebook.png'} alt={'facebook'} />
+                  <img  loading="lazy"  width="20px" height="20px" className="imgContain"   src={'/images/facebook.png'} alt={'facebook'} />
                 </a>
               </li>
               <li>
                 <a href="https://twitter.com/ig_smart?lang=en">
-                  <img  loading="lazy"  width="" height=""   src={'/images/twitter.webp'} alt="twitter" />
+                  <img  loading="lazy"  width="20px" height="20px" className="imgContain"   src={'/images/twitter.webp'} alt="twitter" />
                 </a>
               </li>
               <li>
                 <a>
-                  <img  loading="lazy"  width="" height=""   src={'/images/pinterest.png'} alt="pinterest" />
+                  <img  loading="lazy"  width="20px" height="20px" className="imgContain"   src={'/images/pinterest.png'} alt="pinterest" />
                 </a>
               </li>
               <li>
                 <a>
-                  <img  loading="lazy"  width="" height=""   src={'/images/instagram.png'} alt="instagram" />
+                  <img  loading="lazy"  width="20px" height="20px" className="imgContain"   src={'/images/instagram.png'} alt="instagram" />
                 </a>
               </li>
             </ul>
@@ -156,7 +164,7 @@ useEffect(() => {
               <li>
                 <a href="tel:+4402071674268">
                   <span>
-                    <img  loading="lazy"  width="" height=""   src={'/images/phone-call.png'} alt="phonecall" />
+                    <img  loading="lazy"  width="20px" height="20px" className="imgContain"   src={'/images/phone-call.png'} alt="phonecall" />
                   </span>{" "}
                   <pre>+44 0 20 7167 4268</pre>
                 </a>
@@ -164,7 +172,7 @@ useEffect(() => {
               <li>
                 <a href="mailto:info@ig-smart.com">
                   <span>
-                    <img  loading="lazy"  width="" height=""   src={'/images/email.png'} alt="email" />
+                    <img  loading="lazy"  width="20px" height="20px" className="imgContain"   src={'/images/email.png'} alt="email" />
                   </span>
                   info@ig-smart.com
                 </a>
@@ -178,7 +186,7 @@ useEffect(() => {
           <div className="container">
             <div className="navbar_inr">
               <Link prefetch={true} className="nav-brand" href="/">
-                <img  loading="lazy"  width="" height=""   src={'/images/logo.png'} alt="logo" />
+                <img  loading="lazy"  width="136px" height="46px" className="imgContain"   src={'/images/logo.png'} alt="logo" />
               </Link>
               <div className="navbar-collapse collapse" id="basic-navbar-nav">
                 <div className="navbar-nav">
