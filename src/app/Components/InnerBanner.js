@@ -1,32 +1,15 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React from 'react';
 
-const InnerBanner = (props) => {
+export const InnerBanner = ({content}) => {
   return (
-    <section
-      className={"inner-bnr banner-section"}
-      style={{
-        backgroundImage: `url(${props.banImg})`,
-        backgroundPosition: "right",
-      }}
-    >
-      <Container>
-        <div className="banner_header">
-          {props?.banImg ? (
-            <h1 className="fw-bold  mb-3 text-uppercase">
-              {props?.bannerCnt?.cardTitle}
-            </h1>
-          ) : (
-            <h1 className="fw-bold  mb-3 text-uppercase" style={{color: '#0000'}}>Heading</h1>
-          )}
-          <div
-            className="fz-18"
-            dangerouslySetInnerHTML={{ __html: props?.bannerCnt?.cardPara }}
-          ></div>
+    <section className='bnr-sec bg innr-bnr-sec' style={{backgroundImage: `url(${content?.image})`  }}>
+      <div className='container'>
+        <div className='bnr-ctnt'  data-aos="fade-left">
+            <h3 className='bnr-heading'>{content?.heading}</h3>
+            <p>{content?.description}</p>
         </div>
-      </Container>
+      </div>
     </section>
-  );
-};
+  )
+}
 
-export default InnerBanner;

@@ -1,382 +1,239 @@
-import {toast } from 'react-toastify';
-import { BaseUrl, STANDARD_FORMAT } from './Url';
-import { useQuery } from 'react-query';
-import axios from 'axios';
+import { toast } from "react-toastify";
+import {
+  BASE_URL,
+  Create_Itinerary,
+  Edit_User_Profile,
+  Get_CMS,
+  UnSubscribe,
+  User_SignIn,
+} from "./Url";
+import { SUCCESS } from "./Constants";
 
-// const BaseUrl = process.env.REACT_APP_BASE_URL
-// const BaseUrl = BaseUrl
+// const BaseUrl = process.env.REACT_APP_BASE_URL;
+const BaseUrl = BASE_URL;
 
-export const get = async (url , setData, setIsLoading) => {    
-    setIsLoading(true);
-    var headers;
+const tokenSetter = () => {
+  let token = localStorage.getItem("token");
+
+  let headers;
+  if (token === "" || token == null || token === undefined) {
     headers = {
-        "Content-Type" : "application/json",
+      "Content-Type": "application/json",
     };
-    
-    const completeUrl = BaseUrl + url + STANDARD_FORMAT ;
-    try {
-        const res = await fetch(completeUrl,{
-           method:"GET",
-           headers
-        });
-        const response = await res.json();
-        let httpsStatus =res.status
-        
-        if(httpsStatus === 200){
-            setData(response?.acf);            
-        }
-        else if(httpsStatus === 401){
-            toast.error('Please Login again');
-            localStorage?.clear()
-        }else{
-            toast.error(response?.message);
-        }
-        setIsLoading(false)
-    }catch(error){
-        setIsLoading(false)
-        return error ;
-    }
-}
-
-export const getAll = async (url , setData, setIsLoading) => {    
-    setIsLoading(true);
-    var headers;
+  } else {
     headers = {
-        "Content-Type" : "application/json",
+      "Content-Type": "application/json",
+      "x-access-token": token,
     };
-    
-    const completeUrl = BaseUrl + url + STANDARD_FORMAT ;
-    try {
-        const res = await fetch(completeUrl,{
-           method:"GET",
-           headers
-        });
-        const response = await res.json();
-        let httpsStatus =res.status
-        
-        if(httpsStatus === 200){
-            setData(response);            
-        }
-        else if(httpsStatus === 401){
-            toast.error('Please Login again');
-            localStorage?.clear()
-        }else{
-            toast.error(response?.message);
-        }
-        setIsLoading(false)
-    }catch(error){
-        setIsLoading(false)
-        return error ;
-    }
-}
+  }
+  return headers;
+};
 
-export const useCustomGet = (url) => {
-  return useQuery(['customGet', url], async () => {
-    const headers = {
-      'Content-Type': 'application/json',
-    };
-
-    const completeUrl = BaseUrl + url + STANDARD_FORMAT;
+//Post API for formData
+export const sendFormData = async (url, body) => {
+  let token = localStorage.getItem("token");
+  let completeUrl = BaseUrl + url;
+  try {
     const res = await fetch(completeUrl, {
-      method: 'GET',
-      headers,
-    });
-
-    if (!res.ok) {
-      throw new Error('Network response was not ok');
-    }
-
-    const response = await res.json();
-
-    return response?.acf;
-  }, {
-    staleTime: 600000,
-  });
-};
-
-
-/* Post get Api */
-export const postGet = async (url , setData, page, ...other) => {    
-    const [data,setIsLoading, ...otherArgs] = other;
-    setIsLoading(true)
-    var headers;
-    headers = {
-        "Content-Type" : "application/json",
-    };
-    
-    const completeUrl = BaseUrl + url + `page=${page}`;
-    try {
-        const res = await fetch(completeUrl,{
-           method:"GET",
-           headers
-        });
-        const response = await res.json();
-        let httpsStatus =res.status
-        if(httpsStatus === 200){
-          let totalData = data.concat(response)
-          setData(totalData);            
-          setIsLoading(false)
-        }
-        else if(httpsStatus === 401){
-            toast.error('Please Login again');
-            localStorage?.clear();
-            setIsLoading(false)
-        }else{
-            toast.error(response?.message);
-            setIsLoading(false)
-        }
-    }catch(error){
-        setIsLoading(false)
-        return error ;
-    }
-} 
-
-
-export const fetchWordPressPosts = async () => {
-    const response = await axios.get(BaseUrl+'posts?_embed');
-    return response.data;
-};
-
-export const pdfDownload = async (url, body, setData, setLoader) => {
-    setLoader(true);
-    const headers = {
-        "Content-Type": "application/json",
-    };
-
-    try {
-        const res = await fetch(url, {
-            method: "POST",
-            headers,
-            body: JSON.stringify(body), 
-        });
-
-        if (res.status === 200) {
-            setLoader(false);
-            const response = await res.json();
-            setData(response.download_link);
-           
-        } else {
-            setLoader(false);
-            toast.error('Unable to fetch the PDF.');
-        }
-    } catch (error) {
-        console.error("Error:", error);
-        setLoader(false);
-        toast.error('An error occurred. Please try again later.');
-        throw error;
-    }
-};
-
-
-
-export const post = async (url , body,setData) => {
-    // setIsLoading(true);
-    var token = localStorage.getItem("token");
-    token = await JSON.parse(token);
-
-    var headers;
-    if(token === "" || token === null || token === undefined ){
-        headers ={
-            "Content-Type" : "application/json",
-        };
-    }
-    else{
-        headers = {
-            "Content-Type" : "application/json",
-             'x-access-token': token,
-        };
-    }
-
-    const completeUrl = BaseUrl + url ;
-
-    try {        
-        const res = await fetch(completeUrl,{
-           method:"POST",
-           headers,
-           body,
-        });
-
-        const response = await res.json();
-        let httpsStatus =res.status
-        if(httpsStatus === 200){
-            setData(response?.data);            
-        }
-        else if(httpsStatus === 401){
-            toast.error('Please Login again');
-            localStorage?.clear()
-        }else{
-            toast.error(response?.message);
-        }
-    }catch(error){
-        return error ;
-    }
-} 
-
-export const useCustomQuery = (url, page) => {
-  return useQuery(['customData', url, page], async () => {
-    const headers = {
-      'Content-Type': 'application/json',
-    };
-
-    const completeUrl = BaseUrl + url + `?_embed&page=${page}&acf`;
-    const res = await fetch(completeUrl, {
-      method: 'GET',
-      headers,
-    });
-
-    if (!res.ok) {
-      throw new Error('Network response was not ok 5235');
-    }
-
-    const response = await res.json();
-    const promises = response.map(async (item) => {
-      const imageId = item.acf?.story_card_cover_image; 
-      if (imageId) {
-        const imageUrlResponse = await fetch(
-          `${BaseUrl}media/${imageId}`
-        );
-        const imageUrlData = await imageUrlResponse.json();
-        if (imageUrlData && imageUrlData.source_url) {
-          item.new_cover_image = imageUrlData.source_url;
-        } else {
-          
-          item.new_cover_image = '';
-        }
-      } else {
-        item.new_cover_image = '';
-      }
-      return item;
-    });
-
-    return Promise.all(promises);
-  });
-};
-
-  
-
-  
-
-export const clientDetailsGet = async (url , setData, setIsLoading, id) => {    
-    setIsLoading(true);
-    var headers;
-    headers = {
-        "Content-Type" : "application/json",
-    };
-    
-    const completeUrl = BaseUrl + url + `/${id}`;
-    try {
-        const res = await fetch(completeUrl,{
-           method:"GET",
-           headers
-        });
-        const response = await res.json();
-        let httpsStatus =res?.status
-        if(httpsStatus === 200){
-            setData(response);           
-        }
-        else if(res?.status === 400){
-            toast.error('No more records');
-        }else if(httpsStatus === 401){
-            toast.error('Please Login again');
-            localStorage?.clear()
-        }else{
-            toast.error(response?.message);
-        }
-        setIsLoading(false);
-    }catch(error){
-        return setIsLoading(false);
-    }
-}  
-
-
-/* Common Out Url*/
-export const commonGetOutUrl = async (url , setData, page, setIsLoading, dataList) => {    
-    setIsLoading(true);
-    var headers;
-    headers = {
-        "Content-Type" : "application/json",
-    };
-    
-    try {
-        const res = await fetch(url,{
-           method:"GET",
-           headers
-        });
-        const response = await res.json();
-        let httpsStatus =res?.status
-        if(httpsStatus === 200){
-            let arr = dataList?.concat(response);
-            setData(arr);           
-        }
-        else if(res?.status === 400){
-            toast.error('No more records');
-        }else if(httpsStatus === 401){
-            toast.error('Please Login again');
-            localStorage?.clear()
-        }else{
-            toast.error(response?.message);
-        }
-        setIsLoading(false);
-    }catch(error){
-        return setIsLoading(false);
-    }
-} 
-
-/* Client Stories */
-export const clientGetHome = async (url , setData, page, setIsLoading) => {    
-    setIsLoading(true);
-    var headers;
-    headers = {
-        "Content-Type" : "application/json",
-    };
-    
-    const completeUrl = BaseUrl + url + `?_embed&page=${page}`;
-    try {
-        const res = await fetch(completeUrl,{
-           method:"GET",
-           headers
-        });
-        const response = await res.json();
-        let httpsStatus =res?.status
-        if(httpsStatus === 200){
-            setData(response);           
-        }
-        else if(res?.status === 400){
-            toast.error('No more records');
-        }else if(httpsStatus === 401){
-            toast.error('Please Login again');
-            localStorage?.clear()
-        }else{
-            toast.error(response?.message);
-        }
-        setIsLoading(false);
-    }catch(error){
-        return setIsLoading(false);
-    }
-}  
-
-/* Form Data contactFormApi */
-export const contactFormApi = async (url , formdata, setIsLoading) => {
-    setIsLoading(true);
-     axios({
-      url,
       method: "POST",
       headers: {
-        "Content-Type" : "multipart/form-data",
+        "x-access-token": token,
       },
-      data: formdata,
-    }).then((res) => {
-        setIsLoading(false);
-        toast.success('Submit Successfully');
-    })
-}
+      body,
+    });
+    const response = await res.json();
+    const httpsStatus = res.status;
+    if (httpsStatus === 200) {
+      return SUCCESS;
+    } else if (httpsStatus === 401) {
+      toast.error(response?.message);
+      localStorage?.removeItem("token");
+    } else {
+      toast.error(response?.message);
+      return response?.message;
+    }
+  } catch (err) {
+    toast.error(err);
+    return err;
+  }
+};
 
-{/* enquiry 
-<div  className="cstm-captcha-wrap col-md-7">
-[recaptcha]
-</div> */}
+//Post API, (sending body)
+export const sendData = async (url, body) => {
+  let headers = tokenSetter();
+  const completeUrl = BaseUrl + url;
+  try {
+    const res = await fetch(completeUrl, {
+      method: "POST",
+      headers,
+      body,
+    });
+    const response = await res.json();
+    const httpsStatus = res.status;
+    if (httpsStatus === 200) {
+      if (url === User_SignIn) {
+        //if the reuest is a login
+        localStorage.setItem("token", response?.data);
+        localStorage.setItem("user_id", response?.user?.user_id);
+        toast.success("Login Successful!");
+        return SUCCESS;
+      }
+      if (url === Edit_User_Profile) {
+        return response.responseVal;
+      }
+      if (url === UnSubscribe) {
+        return response.message;
+      } else {
+        return SUCCESS;
+      }
+    } else if (httpsStatus === 401) {
+      toast.error(response?.message);
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+      localStorage?.removeItem("token");
+      return "DEACTIVE";
+    } else if (httpsStatus === 403) {
+      console.log("there's no data available");
+      window.location.href = "/login";
+    } else {
+      toast.error(response?.message);
+      return false;
+    }
+  } catch (err) {
+    toast.error(err);
+    return err;
+  }
+};
 
-{/*
-REQUEST PROPOSAL
+//post API to get and send data
+export const post = async (url, body, setData) => {
+  let headers = tokenSetter();
+  const completeUrl = BaseUrl + url;
+  try {
+    const res = await fetch(completeUrl, {
+      method: "POST",
+      headers,
+      body,
+    });
+    const response = await res.json();
+    let httpsStatus = res.status;
+    if (httpsStatus === 200) {
+      setData(response?.data);
+      return SUCCESS;
+    } else if (httpsStatus === 201 && url === Create_Itinerary) {
+      setData(response?.data);
+      return SUCCESS;
+    } else if (httpsStatus === 201) {
+      return SUCCESS;
+    } else if (httpsStatus === 404 && url === Get_CMS) {
+      return;
+    } else if (httpsStatus === 404) {
+      toast.error(response?.message);
+    } else if (httpsStatus === 401) {
+      toast.error(response?.message);
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+      localStorage?.removeItem("token");
+      return "deactivate";
+    } else {
+      toast.error(response?.message);
+    }
+  } catch (error) {
+    console.log("error", error);
+    toast.error(error);
+  }
+};
 
-*/}
+//Get API request
+export const get = async (url, setData) => {
+  var headers = tokenSetter();
+  const completeUrl = BaseUrl + url;
+  try {
+    const res = await fetch(completeUrl, {
+      method: "GET",
+      headers,
+    });
+    const response = await res.json();
+    let httpsStatus = res.status;
+    if (httpsStatus === 200) {
+      setData(response?.data);
+      return SUCCESS;
+    } else if (httpsStatus === 401) {
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+      toast.error(response?.message);
+      localStorage?.removeItem("token");
+    } else if (httpsStatus === 404 && response.message === "No Data found") {
+      return;
+    } else {
+      toast.error(response?.message);
+      return;
+    }
+  } catch (error) {
+    console.log("error", error);
+    return error;
+  }
+};
+
+// Mobile verification
+export const mobileVerify = async (url, number, body) => {
+  let headers = tokenSetter();
+
+  const completeUrl = BaseUrl + url + "/" + number;
+
+  try {
+    const res = await fetch(completeUrl, {
+      method: "POST",
+      headers,
+      body,
+    });
+    const response = await res.json();
+    let httpsStatus = res.status;
+    if (httpsStatus === 200) {
+      return response.response;
+    } else if (httpsStatus === 404) {
+      toast.error("You've entered wrong OTP!");
+      return false;
+    } else {
+      toast.error(response?.message);
+      return false;
+    }
+  } catch (error) {
+    console.log("error:", error);
+    toast.error(error);
+    return false;
+  }
+};
+
+// Email verification
+export const emailVerify = async (url, number, body) => {
+  let headers = tokenSetter();
+
+  const completeUrl = BaseUrl + url + "/" + number;
+
+  try {
+    const res = await fetch(completeUrl, {
+      method: "POST",
+      headers,
+      body,
+    });
+    const response = await res.json();
+    let httpsStatus = res.status;
+    if (httpsStatus === 200) {
+      return true;
+    } else if (httpsStatus === 404) {
+      toast.error("You've entered wrong OTP!");
+      return false;
+    } else {
+      toast.error(response?.message);
+      return false;
+    }
+  } catch (error) {
+    console.log("error", error);
+    toast.error(error);
+    return false;
+  }
+};

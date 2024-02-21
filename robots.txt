@@ -1,7 +1,0 @@
-user-agent: Googlebot
-allow: *
-
-user-agent: Bingbot
-allow: *
-
-sitemap: https://ig-smart.com/sitemap_index.xml
